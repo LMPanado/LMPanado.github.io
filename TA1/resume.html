@@ -1,102 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panado Resume</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        .container {
-            display: flex;
-            align-items: flex-start; 
-            gap: 10px; 
-        }
-        .resume {
-            width: 600px;
-            border: 2px solid black;
-            padding: 20px;
-            position: relative;
-            background-color: white; 
-            color: black; 
-        }
-        .photo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-            height: 120px;
-            background-color: gray; 
-        }
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        hr {
-            border: 1px solid black;
-        }
-        .section-title {
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .info, .skills, .education {
-            margin: 10px 0;
-        }
-        #colorChangeBtn {
-            align-self: flex-start; 
-            padding: 10px 15px;
-            cursor: pointer;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .resume {
+        width: 600px;
+        height: 600px;
+        border: 2px solid black;
+        padding: 20px;
+        position: relative;
+        background-color: lightgray;
+        color: black;
+        border-radius: 8px;
+      }
+      .photo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: solid 2px black;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      hr {
+        border: 1px solid black;
+      }
+      .section-title {
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .info,
+      .skills,
+      .education {
+        margin: 10px 0;
+      }
+      #colorChangeBtn {
+        align-self: flex-start;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="resume" id="resume">
-            <div class="photo"></div>
-            <h1>PANADO, LUKE M.</h1>
-            <p>Address: Cainta, Rizal<br>
-            Contact No.: 0929 123 4567 <br>
-            Email: 202311453@fit.edu.ph</p>
+      <div class="resume" id="resume">
+        <img class="photo" src="images/id_pic.jpg" alt="ID Picture" />
+        <h1>PANADO, LUKE M.</h1>
+        <p>
+          Address: Cainta, Rizal<br />
+          Contact No: 09291234567 <br />
+          Email: 202311453@fit.edu.ph
+        </p>
 
-            <hr>
+        <hr />
 
-            <div class="section-title">OBJECTIVE:</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="section-title">PROFILE:</div>
+        <p>
+          I am a creative and task-oriented professional with over a year of
+          experience in web design and development across various industries. I
+          have a proven track record of identifying and meeting the
+          technological needs of my company through innovative solutions. My
+          skills include database development, user interface design, coding,
+          testing, troubleshooting, and implementing new features based on user
+          feedback.
+        </p>
 
-            <div class="section-title">ACADEMIC BACKGROUNDS:</div>
-            <p><em>Secondary</em>: FEU High School (STEM-ICT)</p>
-            <p><em>Tertiary</em>: FEU Institute of Technology (BSITWMA)</p>
+        <div class="section-title">ACADEMIC BACKGROUND:</div>
+        <p>
+            <em>Primary</em>: St. John's Academy
+          </p>
+        <p>
+          <em>Secondary</em>: FEU High School (STEM Information and
+          Communications Technology)
+        </p>
+        <p>
+          <em>Tertiary</em>: FEU Institute of Technology (Bachelor of Science in
+          Information Technology Major in Web and Mobile Applications)
+        </p>
 
-            <div class="section-title">SKILLS:</div>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Java</li>
-                <li>Python</li>
-            </ul>
-        </div>
+        <div class="section-title">SKILLS:</div>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Java</li>
+          <li>Python</li>
+        </ul>
+      </div>
 
-        <button id="colorChangeBtn">Change Color</button>
+      <button id="colorChangeBtn">Change Color</button>
     </div>
 
     <script>
-        document.getElementById('colorChangeBtn').addEventListener('click', function() {
-            const resume = document.getElementById('resume');
+        document.getElementById("colorChangeBtn").addEventListener("click", function () {
+            const resume = document.getElementById("resume");
             const currentBgColor = resume.style.backgroundColor;
-            
-            if (currentBgColor === 'green') {
-                resume.style.backgroundColor = 'white';
-                resume.style.color = 'black';
+        
+            if (currentBgColor === "rgb(79, 121, 66)") { 
+                resume.style.backgroundColor = "lightgray";
+                resume.style.color = "black";
             } else {
-                resume.style.backgroundColor = 'green';
-                resume.style.color = 'gold';
+                resume.style.backgroundColor = "#4F7942"; 
+                resume.style.color = "white";            
             }
-        });
+        });        
     </script>
-</body>
+  </body>
 </html>
-
