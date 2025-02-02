@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start; 
+            gap: 10px; 
+        }
+        .resume {
+            width: 600px;
+            border: 2px solid black;
+            padding: 20px;
+            position: relative;
+            background-color: white; 
+            color: black; 
+        }
+        .photo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 120px;
+            background-color: gray; 
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        hr {
+            border: 1px solid black;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .info, .skills, .education {
+            margin: 10px 0;
+        }
+        #colorChangeBtn {
+            align-self: flex-start; 
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume" id="resume">
+            <div class="photo"></div>
+            <h1>PANADO, LUKE M.</h1>
+            <p>Address: Cainta, Rizal<br>
+            Contact No.: 0929 123 4567 <br>
+            Email: 202311453@fit.edu.ph</p>
+
+            <hr>
+
+            <div class="section-title">OBJECTIVE:</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="section-title">ACADEMIC BACKGROUNDS:</div>
+            <p><em>Secondary</em>: FEU High School (STEM-ICT)</p>
+            <p><em>Tertiary</em>: FEU Institute of Technology (BSITWMA)</p>
+
+            <div class="section-title">SKILLS:</div>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </div>
+
+        <button id="colorChangeBtn">Change Color</button>
+    </div>
+
+    <script>
+        document.getElementById('colorChangeBtn').addEventListener('click', function() {
+            const resume = document.getElementById('resume');
+            const currentBgColor = resume.style.backgroundColor;
+            
+            if (currentBgColor === 'green') {
+                resume.style.backgroundColor = 'white';
+                resume.style.color = 'black';
+            } else {
+                resume.style.backgroundColor = 'green';
+                resume.style.color = 'gold';
+            }
+        });
+    </script>
+</body>
+</html>
+
